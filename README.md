@@ -31,8 +31,8 @@ Now send /start to you bot to see if it is running!
 For any type of help on deploy. Contact us on [INDUS CHATS](https://t.me/induschats).
 
 # Thanks To
-Thanks To [Benchamxd](https://github.com/Benchamxd/Telegraph-Uploader)
-Thanks To [AlbertEinsteinTg](https://github.com/AlbertEinsteinTg) For Helping Me in Some Cases
+This Project Forked From [Benchamxd](https://github.com/Benchamxd/Telegraph-Uploader)
+Thanks To [AlbertEinsteinTg](https://github.com/AlbertEinsteinTg) For Helping Benchamxd in Some Cases
 
 Thanks To Owners Of Libraries That Used In The Development Of This Repo
 # Licence
