@@ -31,11 +31,11 @@ Tgraph = Client(
 
 @Tgraph.on_message(filters.photo)
 async def uploadphoto(client, message):
-  msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
+  msg = await message.reply_text("`Trying To Download.....`")
   userid = str(message.chat.id)
   img_path = (f"./DOWNLOADS/{userid}.jpg")
   img_path = await client.download_media(message=message, file_name=img_path)
-  await msg.edit_text("`Tʀʏɪɴɢ Tᴏ Uᴘʟᴏᴀᴅ.....`")
+  await msg.edit_text("`Trying To Upload.....`")
   try:
     tlink = upload_file(img_path)
   except:
@@ -47,11 +47,11 @@ async def uploadphoto(client, message):
 @Tgraph.on_message(filters.animation)
 async def uploadgif(client, message):
   if(message.animation.file_size < 5242880):
-    msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
+    msg = await message.reply_text("`Trying To Download.....`")
     userid = str(message.chat.id)
     gif_path = (f"./DOWNLOADS/{userid}.mp4")
     gif_path = await client.download_media(message=message, file_name=gif_path)
-    await msg.edit_text("`Tʀʏɪɴɢ Tᴏ Uᴘʟᴏᴀᴅ.....`")
+    await msg.edit_text("`Trying To Upload.....`")
     try:
       tlink = upload_file(gif_path)
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")   
@@ -64,11 +64,11 @@ async def uploadgif(client, message):
 @Tgraph.on_message(filters.video)
 async def uploadvid(client, message):
   if(message.video.file_size < 5242880):
-    msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
+    msg = await message.reply_text("`Trying To Download.....`")
     userid = str(message.chat.id)
     vid_path = (f"./DOWNLOADS/{userid}.mp4")
     vid_path = await client.download_media(message=message, file_name=vid_path)
-    await msg.edit_text("`Tʀʏɪɴɢ Tᴏ Uᴘʟᴏᴀᴅ.....`")
+    await msg.edit_text("`Trying To Download.....`")
     try:
       tlink = upload_file(vid_path)
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
@@ -85,8 +85,8 @@ async def home(client, message):
         InlineKeyboardButton('Close', callback_data='close')
     ],
     [
-        InlineKeyboardButton('Our Channel', url='http://telegram.me/indusbots'),
-        InlineKeyboardButton('Source Code', url='https://github.com/benchamxd/Telegraph-Uploader')
+        InlineKeyboardButton('Channel', url='https://t.me/termux_tools_AA'),
+        InlineKeyboardButton('Contact Owner', url='http://wh173-5p1d3r.rf.gd')
     ]]
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
@@ -97,7 +97,7 @@ im a telegraph Uploader That Can Upload Photo, Video And Gif
         
 Simply send me photo, video or gif to upload to Telegra.ph
         
-Made With Love By @indusBots</b>""",
+Made By WH173 5P1D3R</b>""",
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=message.message_id
@@ -110,7 +110,7 @@ async def help(client, message):
         InlineKeyboardButton('Close', callback_data='close')
     ],
     [
-        InlineKeyboardButton('Our Channel', url='http://telegram.me/indusbots')
+        InlineKeyboardButton('Our Channel', url='https://t.me/termux_tools_AA')
     ]]
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
